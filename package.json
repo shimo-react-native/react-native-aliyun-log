@@ -1,0 +1,25 @@
+{
+  "name": "react-native-aliyun-log",
+  "version": "0.1.0",
+  "description": "阿里云日志服务 react native SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimohq/react-native-aliyun-log.git"
+  },
+  "keywords": [
+    "sls",
+    "log",
+    "aliyun",
+    "react-native"
+  ],
+  "author": "Bell <bell@greedlab.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shimohq/react-native-aliyun-log/issues"
+  },
+  "homepage": "https://github.com/shimohq/react-native-aliyun-log#readme"
+}
