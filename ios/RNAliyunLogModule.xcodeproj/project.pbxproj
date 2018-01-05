@@ -200,7 +200,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../ios/Carthage/Build/iOS/",
+					"$(SRCROOT)/../../../ios/Carthage/Build/iOS/",
 					"$(SRCROOT)/../Example/ios/Carthage/Build/iOS/",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -220,7 +220,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../ios/Carthage/Build/iOS/",
+					"$(SRCROOT)/../../../ios/Carthage/Build/iOS/",
 					"$(SRCROOT)/../Example/ios/Carthage/Build/iOS/",
 				);
 				HEADER_SEARCH_PATHS = (
