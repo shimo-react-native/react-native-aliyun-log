@@ -25,7 +25,9 @@ RCT_EXPORT_METHOD(postAliyunLog:(NSString*)logStore topic:(NSString*)topic sourc
     [log PutContent:[keyContent objectForKey:@"content"] withKey:[keyContent objectForKey:@"key"]];
   }];
   [group PutLog:log];
-  [_logClient PostLog:group logStoreName:logstore call:nil];
+  [_logClient PostLog:group logStoreName:logStore call:^(NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    
+  }];
 }
 
 @end
