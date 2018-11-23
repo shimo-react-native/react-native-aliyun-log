@@ -2,7 +2,6 @@ package im.shimo.aliyunlog;
 
 import com.aliyun.sls.android.sdk.ClientConfiguration;
 import com.aliyun.sls.android.sdk.LOGClient;
-import com.aliyun.sls.android.sdk.LogException;
 import com.aliyun.sls.android.sdk.core.auth.StsTokenCredentialProvider;
 import com.aliyun.sls.android.sdk.model.Log;
 import com.aliyun.sls.android.sdk.model.LogGroup;
@@ -53,8 +52,11 @@ public class AliyunLogModule extends ReactContextBaseJavaModule {
 
         try {
             PostLogRequest request = new PostLogRequest(mProject, logStore, logGroup);
+            if(mlogClient == null) {
+                return;
+            }
             mlogClient.asyncPostLog(request, null);
-        } catch (LogException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
