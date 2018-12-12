@@ -41,18 +41,18 @@ public class AliyunLogModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void postAliyunLog(String logStore, String topic, String source, ReadableArray keyContents) {
-        LogGroup logGroup = new LogGroup(topic, source);
-
-        Log log = new Log();
-        for (int index = 0; index < keyContents.size(); index++) {
-            ReadableMap keyContent = keyContents.getMap(index);
-            log.PutContent(keyContent.getString("key"), keyContent.getString("content"));
-        }
-        logGroup.PutLog(log);
-
         try {
+            LogGroup logGroup = new LogGroup(topic, source);
+
+            Log log = new Log();
+            for (int index = 0; index < keyContents.size(); index++) {
+                ReadableMap keyContent = keyContents.getMap(index);
+                log.PutContent(keyContent.getString("key"), keyContent.getString("content"));
+            }
+            logGroup.PutLog(log);
+
             PostLogRequest request = new PostLogRequest(mProject, logStore, logGroup);
-            if(mlogClient == null) {
+            if (mlogClient == null) {
                 return;
             }
             mlogClient.asyncPostLog(request, null);
