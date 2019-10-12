@@ -1,6 +1,6 @@
 {
   "name": "react-native-aliyun-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "阿里云日志服务 react native SDK",
   "main": "index.js",
   "scripts": {
