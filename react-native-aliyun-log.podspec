@@ -9,7 +9,9 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lisong' => 'lisong@shimo.im' }
   s.source           = { :git => 'https://github.com/shimohq/react-native-aliyun-log.git', :tag => "v#{s.version}" }
-
+  
+  s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1' }
+  
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ios/**/*.{h,m,mm}'
