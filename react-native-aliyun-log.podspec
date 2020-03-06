@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.source_files = 'ios/**/*.{h,m,mm}'
 
   s.dependency 'React'
-  s.dependency 'AliyunSlsObjc'
+  s.dependency 'AliyunSlsObjc-Bell'
 end
